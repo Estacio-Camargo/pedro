@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estácio Sa</title>
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div id="app">
+
+        <header class="app-header">
+            <div class="menu-hamb">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+            </div>
+            <nav id="header-nav">
+
+
+                <div class="header-logo">
+                    <img src="./assets/estacio-logo-faculdade-removebg-preview.png" alt="">
+                </div>
+
+                <div class="elemento-usuario">
+
+                    <button class="btn-notificacao">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-bell"></i>
+                        </div>
+
+                        <span>Notificações</span>
+                    </button>
+
+
+
+                    <div class="area-usuario">
+                        <div class="dados-usuario grid">
+                            <p>Olá, <strong>Pedro</strong></p>
+                            <p>Matrícula: <span>201821212210</span></p>
+                        </div>
+
+                        <button class="icon-usuario">
+                            <img src="./assets/pedro.jfif" alt="">
+
+                        </button>
+                    </div>
+
+                </div>
+            </nav>
+        </header>
+        <aside class="sidebar ">
+            <nav class="side-nav">
+                <ul>
+                    <li>
+                        <a href="">Minhas Disciplinas
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+
+                    </li>
+                    <li><a href="">Acadêmico
+                            <i class="fas fa-angle-right"></i>
+                        </a></li>
+                    <li><a href="">Financeiro
+                            <i class="fas fa-angle-right"></i>
+                        </a></li>
+                    <li><a href="">Atendimento
+                            <i class="fas fa-angle-right"></i>
+                        </a></li>
+                    <li><a href="">Atividades Complementares
+                            <i class="fas fa-angle-right"></i>
+                        </a></li>
+                    <li><a href="">Carreiras
+                            <i class="fas fa-angle-right"></i>
+                        </a></li>
+                    <li class="folder">
+                        <button class="folder-trigger" onclick="toggleMenu('pasta-aluno')">Pasta do Aluno <i
+                                class="fas fa-angle-right"></i></button>
+
+
+                        <ul id="pasta-aluno" class="submenu hidden">
+                            <li><button class="sub-item folder-documentos">Meus documentos</button></li>
+
+                            <li class="folder">
+                                <button class="folder-trigger folder-carteira"
+                                    onclick="toggleMenu('sub-carteira')">carteirinha de Estudante
+                                    <i class="fas fa-angle-right"></i>
+                                </button>
+
+                                <ul id="sub-carteira" class="submenu hidden">
+                                    <button class="btn-estudante"
+                                        onclick="gerarCarteirinha('Pedro Henrique da Silva Neto', 'Ciência da Computação', '134.739.836-83', './assets/pedro.jfif', '04 Mai 2001', '2018 2121 2210')">
+                                        👤 Pedro
+                                    </button>
+                                    <!-- 
+                                    <button class="btn-estudante"
+                                        onclick="gerarCarteirinha('Gabriela Oliveira', 'Direito', '222.333.444-55', './assets/michael.jpg', '15 Mai 2000', '2023 0555 8888')">
+                                        👤 Gabriela Oliveira
+                                    </button>
+                                    <button class="btn-estudante"
+                                        onclick="gerarCarteirinha('Gabriela Oliveira', 'Direito', '222.333.444-55', './assets/gabriela.jpg', '15 Mai 2000', '2023 0555 8888')">
+                                        👤 Pedro Silva
+                                    </button> -->
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <div id="modal-container"></div>
+                </ul>
+            </nav>
+
+
+        </aside>
+        <div class="wrapper">
+            <section class="app-section"></section>
+            <main class="app-main">
+                <section class="quick-access">
+
+                    <header class="header-access">
+                        <h2 class="title-access">Acesso rápido</h2>
+                    </header>
+
+                    <div class="cards-container ">
+
+                        <article class="quick-access__card">
+                            <header class="card-header">
+                                <div class=" icon icon-requeriments">
+                                    <i class="fas fa-file-invoice"></i>
+                                </div>
+                                <h3>Requerimentos</h3>
+                            </header>
+                            <p>Consulte a resposta e o andamento do seu requerimento, através desse acesso rápido.</p>
+                            <nav class="card-links">
+                                <ul>
+                                    <li><a href="">Novo</a></li>
+                                    <li><a href="">Consulta</a></li>
+                                    <li><a href="">Tabela de Preços</a></li>
+                                </ul>
+                            </nav>
+                        </article>
+                        <article class="quick-access__card">
+                            <header class="card-header">
+                                <div class=" icon icon-financeiro">
+                                    <i class="far fa-credit-card"></i>
+                                </div>
+                                <h3>Financeiro</h3>
+                            </header>
+                            <p>Aqui você pode retirar a 2ª Via do seu boleto, recalculá-lo, pagá-lo no cartão entre
+                                outras funções.</p>
+                            <nav class="card-links">
+                                <ul>
+                                    <li><a href="">Informações Financeiras</a></li>
+                                    <li><a href="">Simulador de Negociação</a></li>
+                                    <li><a href="">Consulta Propostas de Negociação</a></li>
+                                </ul>
+                            </nav>
+                        </article>
+                        <article class="quick-access__card">
+                            <header class="card-header">
+                                <div class="icon icon-academico">
+                                    <i class="fas fa-user-graduate"></i>
+                                </div>
+                                <h3>Acadêmico</h3>
+                            </header>
+                            <p>Aqui você pode consultar suas disciplinas, quadro de horários, Histórico Escolar etc.</p>
+                            <nav class="card-links">
+                                <ul>
+                                    <li><a href="">Histórico Escolar</a></li>
+                                    <li><a href="">Disciplinas Matriculadas</a></li>
+                                    <li><a href="">Quadro de Horários</a></li>
+                                </ul>
+                            </nav>
+                        </article>
+                    </div>
+
+                </section>
+
+                <section class="vc">
+                    <h2>Estácio com você!</h2>
+                </section>
+
+            </main>
+        </div>
+
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"
+        integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

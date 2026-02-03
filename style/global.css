@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-family-open-sans: 'Open Sans', sans-serif;
+    --text: 400 1rem/normal var(--font-family-open-sans);
+    --text-sm: 400 .875rem/normal var(--font-family-open-sans);
+    --text-xs: 400 .75rem/normal var(--font-family-open-sans);
+
+ 
+
+
+    --input-base: #1C1F21;
+    --input-stroke: #626568;
+    --input-placeholder: #869198;
+
+    --shape-background: #131516;
+    --shape-body: #8f9294;
+    --shape-button: #2D3136;
+    --shape-hover: #383D42;
+    --text-button: rgb(102, 102, 101);
+    --text-heading: #F9F9F9;
+
+}
+
+body {
+    font: var(--text);
+    overflow: hidden;
+}
+
+.grid {
+    display: grid;
+}
+
+ul {
+    list-style: none;
+    
+    & a {
+        text-decoration: none;
+        color: #425683;
+        font-size: .8rem;
+    }
+
+    
+}
+
+/* img {
+    width: 100%;
+} */
